@@ -53,22 +53,34 @@
       cursor: grabbing;
     }
 
-    .caneca {
+     .caneca {
       position: absolute;
-      bottom: 40px;
+      top: 80px;  /* Cambiado de bottom a top */
       width: 160px;
-      height: 200px;
+      height: 80px;  /* Altura reducida para área de título */
       z-index: 20;
       /* Áreas de drop verdes semitransparentes */
       background-color: rgba(0, 255, 0, 0.2);
       border: 3px solid #00ff00;
       border-radius: 15px;
       box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: bold;
+      text-shadow: 1px 1px 2px black;
     }
 
-    #blanca { left: 15%; }
-    #verde  { left: 42%; }
-    #negra  { left: 69%; }
+    #blanca { 
+      left: 15%;
+    }
+    #verde { 
+      left: 42%;
+    }
+    #negra { 
+      left: 69%;
+    }
   </style>
 </head>
 <body>
