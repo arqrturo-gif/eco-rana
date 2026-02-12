@@ -3,13 +3,13 @@ let indiceActual = 0;
 let objetoActual = null;
 
 const objetosData = [
-  { src: "img/serv", categoria: "no-aprovechable", alt: "servilleta", top: "55%", left: "5%" },
-  { src: "img/cp", categoria: "organico", alt: "cáscara de plátano", top: "30%", left: "18%" },
-  { src: "img/btlv", categoria: "reciclable", alt: "botella gaseosa", top: "65%", left: "28%" },
-  { src: "img/jeringa", categoria: "no-aprovechable", alt: "jeringa", top: "45%", left: "45%" },
-  { src: "img/vaso", categoria: "reciclable", alt: "vaso cartón", top: "75%", left: "60%" },
-  { src: "img/btlv", categoria: "reciclable", alt: "botella plástico", top: "20%", left: "75%" },
-  { src: "img/ph", categoria: "no-aprovechable", alt: "papel higiénico", top: "80%", left: "85%" }
+  { src: "img/serv.png", categoria: "no-aprovechable", alt: "servilleta", top: "55%", left: "5%" },
+  { src: "img/cp.png", categoria: "organico", alt: "cáscara de plátano", top: "30%", left: "18%" },
+  { src: "img/btlv.png", categoria: "reciclable", alt: "botella gaseosa", top: "65%", left: "28%" },
+  { src: "img/jeringa.png", categoria: "no-aprovechable", alt: "jeringa", top: "45%", left: "45%" },
+  { src: "img/vaso.png", categoria: "reciclable", alt: "vaso cartón", top: "75%", left: "60%" },
+  { src: "img/btlv.png", categoria: "reciclable", alt: "botella plástico", top: "20%", left: "75%" },
+  { src: "img/ph.png", categoria: "no-aprovechable", alt: "papel higiénico", top: "80%", left: "85%" }
 ];
 
 const contenedorObjetos = document.getElementById("objetos");
