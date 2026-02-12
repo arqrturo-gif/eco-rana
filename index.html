@@ -8,27 +8,62 @@
     body {
       margin: 0;
       height: 100vh;
-      background-image: url("./img/fondo.png");
+      background-image: url("./img/Fondo");
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
       overflow: hidden;
+      font-family: Arial, sans-serif;
     }
 
-    #objeto {
+    #puntaje, #vidas {
       position: absolute;
-      top: 60%;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 80px;
-      cursor: grab;
+      top: 20px;
+      background: rgba(0,0,0,0.7);
+      color: white;
+      padding: 12px 24px;
+      border-radius: 30px;
+      font-size: 20px;
+      font-weight: bold;
+      z-index: 1000;
     }
+    #puntaje {
+      right: 200px;
+      background: #2e7d32;
+    }
+    #vidas {
+      right: 30px;
+      background: #c62828;
+    }
+
+    .objeto {
+      position: absolute;
+      width: 70px;
+      cursor: grab;
+      transition: transform 0.1s;
+      z-index: 10;
+    }
+    .objeto:hover {
+      transform: scale(1.1);
+    }
+    .objeto:active {
+      cursor: grabbing;
+    }
+
+    .objeto:nth-child(1) { top: 55%; left: 5%; }
+    .objeto:nth-child(2) { top: 30%; left: 18%; }
+    .objeto:nth-child(3) { top: 65%; left: 28%; }
+    .objeto:nth-child(4) { top: 45%; left: 45%; }
+    .objeto:nth-child(5) { top: 75%; left: 60%; }
+    .objeto:nth-child(6) { top: 20%; left: 75%; }
+    .objeto:nth-child(7) { top: 80%; left: 85%; }
 
     .caneca {
       position: absolute;
       bottom: 40px;
       width: 160px;
       height: 200px;
+      z-index: 20;
     }
 
     #blanca { left: 15%; }
@@ -36,18 +71,21 @@
     #negra  { left: 69%; }
   </style>
 </head>
-
 <body>
 
-  <!-- OBJETO ARRASTRABLE -->
-  <img
-    id="objeto"
-    src="img/botella.png"
-    draggable="true"
-    data-categoria="reciclable"
-  >
+  <div id="puntaje">Puntaje: 0</div>
+  <div id="vidas">Vidas: 3</div>
 
-  <!-- ZONAS DE DROP (ALINEADAS CON EL FONDO) -->
+  <div id="objetos">
+    <img src="img/serv" class="objeto" draggable="true" data-categoria="no-aprovechable" alt="servilleta">
+    <img src="img/cp" class="objeto" draggable="true" data-categoria="organico" alt="cáscara de plátano">
+    <img src="img/btlv" class="objeto" draggable="true" data-categoria="reciclable" alt="botella gaseosa">
+    <img src="img/jeringa" class="objeto" draggable="true" data-categoria="no-aprovechable" alt="jeringa">
+    <img src="img/vaso" class="objeto" draggable="true" data-categoria="reciclable" alt="vaso cartón">
+    <img src="img/btlv" class="objeto" draggable="true" data-categoria="reciclable" alt="botella plástico">
+    <img src="img/ph" class="objeto" draggable="true" data-categoria="no-aprovechable" alt="papel higiénico">
+  </div>
+
   <div id="blanca" class="caneca" data-categoria="reciclable"></div>
   <div id="verde"  class="caneca" data-categoria="organico"></div>
   <div id="negra"  class="caneca" data-categoria="no-aprovechable"></div>
