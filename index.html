@@ -12,6 +12,7 @@
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
+      overflow: hidden;
     }
 
     #objeto {
@@ -38,7 +39,7 @@
 
 <body>
 
-  <!-- OBJETO -->
+  <!-- OBJETO ARRASTRABLE -->
   <img
     id="objeto"
     src="img/botella.png"
@@ -46,7 +47,7 @@
     data-categoria="reciclable"
   >
 
-  <!-- ZONAS DE DROP (alineadas con el fondo) -->
+  <!-- ZONAS DE DROP (ALINEADAS CON EL FONDO) -->
   <div id="blanca" class="caneca" data-categoria="reciclable"></div>
   <div id="verde"  class="caneca" data-categoria="organico"></div>
   <div id="negra"  class="caneca" data-categoria="no-aprovechable"></div>
